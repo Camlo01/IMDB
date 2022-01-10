@@ -5,7 +5,7 @@ package com.Wigilabs.IMDB;
 //import com.Wigilabs.IMDB.Repository.MovieRepository;
 //import com.Wigilabs.IMDB.Repository.UserRepository;
 //import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ComponentScan(basePackages = {"com.Wigilabs.IMDB"})
 public class ImdbApplication {
 
-    @Autowired
+    //@Autowired
     //private MovieRepository repoMovie;
     //private UserRepository repoUser;
 
@@ -43,9 +43,10 @@ public class ImdbApplication {
             System.out.println("");
 
             //List<Movie> mov = repoMovie.getAll();
-            //System.out.println("Movies "+ mov.size());
+            //System.out.println("Movies " + mov.size());
+
             //List<User> use = repoUser.getAll();
-            //System.out.println("Users =" + use.size());
+            //System.out.println("Users: " + use.size());
         };
     }
 

@@ -56,6 +56,24 @@ public class MovieController {
         service.delete(id);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
+    
+    /**
+     * 
+     * @DeleteMapping("/{id}")
+    public ResponseEntity delete(@PathVariable("id") Integer id) {
+        service.delete(id);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+     */
+    
+    //CONSULTA ID PUNTUAL
+    
+    @GetMapping("/{id}")
+    private Movie getById(@PathVariable("id") Integer id) {
+        return service.getById(id);
+    }
+        
+        
   
       
 }

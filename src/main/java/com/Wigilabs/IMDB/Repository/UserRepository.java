@@ -26,10 +26,6 @@ public class UserRepository {
         return repo.findAll();
     }
 
-    public Optional<User> getById(Integer id) {
-        return repo.getById(id);
-    }
-
     public User save(User usuario) {
         return repo.save(usuario);
     }
@@ -38,9 +34,16 @@ public class UserRepository {
         repo.delete(usuario);
     }
 
+    public Optional<User> getById(Integer id) {
+        return repo.getById(id);
+    }
+
+    public Optional<User> getByEmail(String email) {
+        return repo.findByEmail(email);
+    }
+
     public Optional<User> getByEmailAndPassword(String email, String password) {
         return repo.findByEmailandPassword(email, password);
     }
-
 
 }

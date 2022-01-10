@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Camilo
  */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/movie")
 @CrossOrigin
 public class MovieController {
     

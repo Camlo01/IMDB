@@ -38,4 +38,50 @@ public class UserService {
 
     }
 
+    public User update(User usuario) {
+        Optional<User> ou = repo.getById(usuario.getId());
+        if (ou.isPresent()) {
+            User act = ou.get();
+            //validacion para no actualizar datos nulos o vacios
+            if (usuario.getId() != null) {
+                act.setId(usuario.getId());
+            }
+
+            if (usuario.getEmail() != null && usuario.getEmail().length() > 0) {
+                act.setEmail(usuario.getEmail());
+            }
+            if (usuario.getPassword() != null && usuario.getPassword().length() > 0) {
+                act.setPassword(usuario.getPassword());
+            }
+
+            return repo.save(act);
+        }
+        return usuario;
+    }
+
+    public User getByEmailAndPassword(String email, String password) {
+        Optional<User> user = repo.getByEmailAndPassword(email, password);
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            User e = new User();
+            return e;
+        }
+    }
+
+    public boolean getByEmail(String email) {
+        Optional<User> user = repo.getByEmail(email);
+        return user.isPresent();
+    }
+
+    public User getById(Integer id) {
+        Optional<User> user = repo.getById(id);
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            User e = new User();
+            return e;
+        }
+    }
+
 }

@@ -16,11 +16,10 @@ import org.springframework.data.mongodb.repository.Query;
  */
 public interface CrudUserRepository extends MongoRepository<User, Integer>{
 
-    @Query("{id: ?0}")
-    public Optional<User> getById(Integer id);
+   public Optional<User> findByEmail(String email); 
 
     @Query("{id: ?0}")
-    public Optional<User> getByid(Integer Id);
+    public Optional<User> getById(Integer id);  
     
     @Query("{$and : [{email: {$lte: ?0}},{password: {$lte: ?1}}]}")
     public Optional<User> findByEmailandPassword(String email, String password);

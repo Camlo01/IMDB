@@ -13,15 +13,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- *
+ *  
+ *  Se implementa la lógica de negocio también
+ * identificada por la anotación @Autowired
+ * 
  * @author Camilo
  */
-@Service
+@Service 
 public class MovieService {
 
     @Autowired
     private MovieRepository repo;
 
+    
     public List<Movie> getAll() {
         return repo.getAll();
     }

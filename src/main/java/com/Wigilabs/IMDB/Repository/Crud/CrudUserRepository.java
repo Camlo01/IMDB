@@ -21,6 +21,16 @@ public interface CrudUserRepository extends MongoRepository<User, Integer>{
     @Query("{id: ?0}")
     public Optional<User> getById(Integer id);  
     
+    //{$and : Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.
+    
+    //{email: {$lte: ?0}} FROM Email select the document WHERE the value in the field is less or equal to (1 in this case) 
+    //{password: {$lte: ?1}}]} FROM Password select the document WHERE the value in the field is less or equal to (1 in this case) 
     @Query("{$and : [{email: {$lte: ?0}},{password: {$lte: ?1}}]}")
     public Optional<User> findByEmailandPassword(String email, String password);
 }
+
+/**
+ * Documentation @Query
+ * https://docs.mongodb.com/manual/reference/operator/query/
+ * 
+ */

@@ -1,5 +1,8 @@
 package com.Wigilabs.IMDB;
 
+
+// IMPORTS para poder medir las colecciones
+
 //import com.Wigilabs.IMDB.Model.Movie;
 //import com.Wigilabs.IMDB.Model.User;
 //import com.Wigilabs.IMDB.Repository.MovieRepository;
@@ -18,6 +21,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ComponentScan(basePackages = {"com.Wigilabs.IMDB"})
 public class ImdbApplication {
 
+    //Se importan los repositorios para medir el
+    //tamaño de las coleccioones
     //@Autowired
     //private MovieRepository repoMovie;
     //private UserRepository repoUser;
@@ -29,7 +34,8 @@ public class ImdbApplication {
     @Bean
     ApplicationRunner applicationRunner() {
         return args -> {
-            System.out.println("APLICACIÓN INICIADA");
+            System.out.println("");
+            System.out.println("APLICACIÓN INICIADA CORRECTAMENTE");
 
             //Si aparece el caracol significa que la aplicación está funcionado
             System.out.println("    o       o");
@@ -42,6 +48,8 @@ public class ImdbApplication {
             System.out.println("        \\____\\____\\______/");
             System.out.println("");
 
+            //Recorrido que muestra el tamaño de las colecciones
+            
             //List<Movie> mov = repoMovie.getAll();
             //System.out.println("Movies " + mov.size());
 

@@ -14,6 +14,10 @@ import org.springframework.stereotype.Service;
 
 /**
  *
+ * 
+ *  Se implementa la lógica de negocio también
+ * identificada por la anotación @Autowired
+ * 
  * @author Camilo
  */
 @Service

@@ -13,12 +13,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
+ * Los elementos de la tabla de datos 
+ * 
  * @author Camilo
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "movies")
+@Document(collection = "movies") //nombre de la collecion en MongoDB
 public class Movie {
 
     @Id

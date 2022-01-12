@@ -24,6 +24,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
+ *  La anotación @RestController marca la clase como un controlador donde
+ * cada método devuelve un objeto de dominio en lugar de una vista
+ * 
+ * Simplemente envía el objeto de dominio como una respuesta HTTP
+ * en el formato que entienden los consumidores, como JSON
+ * 
  * @author Camilo
  */
 @RestController

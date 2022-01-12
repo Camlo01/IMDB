@@ -14,6 +14,9 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
+ * Se permite el acceso a la base de datos gracias a la
+ * anotación @Repository
+ * 
  * @author Camilo
  */
 @Repository
@@ -22,18 +25,22 @@ public class MovieRepository {
     @Autowired
     private CrudMovieRepository repo;
 
+    //Traer TODOS los elementos
     public List<Movie> getAll() {
         return repo.findAll();
     }
 
+    //Traer un elemento por el ID
     public Optional<Movie> getById(Integer id) {
         return repo.getById(id);
     }
 
+    //Guardar un elemento
     public Movie save(Movie movie) {
         return repo.save(movie);
     }
 
+    //Eliminar un elemento
     public void delete(Movie movie) {
         repo.delete(movie);
     }

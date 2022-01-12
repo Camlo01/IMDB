@@ -14,6 +14,9 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
+ * Se permite el acceso a la base de datos gracias a la
+ * anotación @Repository
+ * 
  * @author Camilo
  */
 @Repository
@@ -21,27 +24,33 @@ public class UserRepository {
 
     @Autowired
     private CrudUserRepository repo;
-
+    
+    //Traer todos los usuarios   
     public List<User> getAll() {
         return repo.findAll();
     }
 
+    //Guardar el usuario creado
     public User save(User usuario) {
         return repo.save(usuario);
     }
 
+    //Se elimina usuario
     public void delete(User usuario) {
         repo.delete(usuario);
     }
 
+    //Se trae el usuario por el id
     public Optional<User> getById(Integer id) {
         return repo.getById(id);
     }
 
+    //Se trae el usuario por el correo
     public Optional<User> getByEmail(String email) {
         return repo.findByEmail(email);
     }
 
+    //Se trae el Email y la Password
     public Optional<User> getByEmailAndPassword(String email, String password) {
         return repo.findByEmailandPassword(email, password);
     }

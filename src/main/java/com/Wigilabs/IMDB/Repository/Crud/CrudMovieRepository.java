@@ -16,7 +16,15 @@ import org.springframework.data.mongodb.repository.Query;
  */
 public interface CrudMovieRepository extends MongoRepository<Movie, Integer>{
     
+    
+    //
     @Query("{id: ?0}")
     public Optional<Movie> getById(Integer id);
     
 }
+
+/**
+ * Documentation @Query
+ * https://docs.mongodb.com/manual/reference/operator/query/
+ * 
+ */

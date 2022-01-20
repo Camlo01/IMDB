@@ -61,8 +61,8 @@ public class MovieService {
             }
             // YEAR REALASED 
 
-            if (movie.getYearRealased() != 0 && movie.getYearRealased() > 0) {
-                upd.setYearRealased(movie.getYearRealased());
+            if (movie.getYearReleased() != 0 && movie.getYearReleased() > 0) {
+                upd.setYearReleased(movie.getYearReleased());
             }
             if (movie.getRating() != 0 && movie.getRating() > 0) {
                 upd.setRating(movie.getRating());

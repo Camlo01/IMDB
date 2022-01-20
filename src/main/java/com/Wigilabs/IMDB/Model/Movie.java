@@ -29,7 +29,7 @@ public class Movie {
     private String poster;
     private String trailer;
     private String description;
-    private int yearRealased;
+    private int yearReleased;
     private float rating;
 
 }

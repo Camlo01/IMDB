@@ -30,6 +30,10 @@ public class MovieService {
         return repo.getAll();
     }
 
+    public List<Movie> searchMovie(String text){
+        return repo.searchMovie(text);
+    }
+
     public Movie save(Movie movie) {
         return repo.save(movie);
     }

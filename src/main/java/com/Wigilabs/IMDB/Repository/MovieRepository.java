@@ -30,6 +30,11 @@ public class MovieRepository {
         return repo.findAll();
     }
 
+    //Traer elementos
+    public List<Movie> searchMovie(String text){
+        return (List<Movie>) repo.searchMovie(text);
+    }
+
     //Traer un elemento por el ID
     public Optional<Movie> getById(Integer id) {
         return repo.getById(id);

@@ -21,11 +21,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ComponentScan(basePackages = {"com.Wigilabs.IMDB"})
 public class ImdbApplication {
 
-    //Se importan los repositorios para medir el
-    //tamaño de las coleccioones
-    //@Autowired
-    //private MovieRepository repoMovie;
-    //private UserRepository repoUser;
+//    Se importan los repositorios para medir el
+//    tamaño de las coleccioones
+//    @Autowired
+//    private MovieRepository repoMovie;
+//    private UserRepository repoUser;
 
     public static void main(String[] args) {
         SpringApplication.run(ImdbApplication.class, args);
@@ -58,15 +58,14 @@ public class ImdbApplication {
         };
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("*");
-            }
-        };
-
-    }
-
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurer() {
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/**").allowedOrigins("*");
+//            }
+//        };
+//    }
+//
 }

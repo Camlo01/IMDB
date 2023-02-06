@@ -44,6 +44,11 @@ public class MovieController {
     public List<Movie> getAll(){
         return service.getAll();
     }
+
+    @GetMapping("/search-by={text}")
+    List<Movie> searchMovie(@PathVariable("text") String text){
+        return service.searchMovie(text);
+    }
     
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
